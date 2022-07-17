@@ -1,0 +1,42 @@
+정규표현식
+
+( )=> 그룹지정
+ex) /(Hello|Hi)/ => group#1 : Hello , group#1 : Hi;
+
+gr(e|a)y => gray or grey 찾음 -> group #1: a , group #1: e
+
+만약 group으로 지정하지 않고 싶다면
+gr(?:e|a)y로 하면 그룹지정 x
+
+(?:) -> 찾지만 기억하지는 않음
+
+gr(e|a|d)y --> gr[aed]y 와 같음
+
+gr[a-f]y -> a~f까지 만족하는 것 찾음
+
+활용
+1. [a-zA-Z0-9] a-z까지 A-Z까지 0-9까지 찾음
+2. [^a-zA-Z0-9] a-z까지 A-Z까지 0-9까지를 제외한 나머지를 찾음
+
+-단어 경계-
+
+/\bYa/gm -> Ya 중에서 단어 앞에 사용되는 Ya만 추출 
+ex. (Ya) (Ya)YaYa ya
+
+/Ya\b/gm -> Ya 중에서 단어 뒤에 사용되는 Ya만 추출
+ex. (Ya) YaYa(Ya) ya
+
+/Ya\B/ -> Ya 중에서 단어 뒤에서 쓰이지 않는 Ya만 추출
+ex. Ya (Ya)(Ya)Ya ya
+
+/^Ya/ -> 문장의 시작의 Ya를 추출
+
+/Ya$/ -> 문자으이 끝의 Ya를 추출
+
+
+
+
+
+
+
+
