@@ -1,0 +1,5 @@
+https://www.notion.so/JavaScript-50e8863185754ef888f8990111d1b82d
+
+1. Scope
+2. Scope Chain
+3. execution context
